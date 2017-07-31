@@ -1,0 +1,32 @@
+{
+    "require": {
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "dunaev/silex-engine": "dev-master",
+        "symfony/dependency-injection": "^3.3",
+        "symfony/yaml": "^3.3",
+        "symfony/config": "^3.3",
+        "symfony/expression-language": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monolit\\Controllers\\" : "Controllers/"
+        }
+    },
+    "classmap": [
+        "Controllers"
+    ],
+    "extra": {
+        "merge-plugin": {
+            "include": [
+                "services/*/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": false
+        }
+    }
+}

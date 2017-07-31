@@ -1,0 +1,5 @@
+services:
+  targetClientApi:
+    class: AdServer\ClientLocal\Components\Client
+    arguments:
+      - '/target'

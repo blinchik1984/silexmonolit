@@ -1,0 +1,8 @@
+home:
+  path: /
+  defaults: { _controller: 'Monolit\Controllers\HomePage::index' }
+ 
+hello:
+  path: /hello
+  defaults: { _controller: 'Monolit\Controllers\HomePage::hello', name: 'andrey' }
+
